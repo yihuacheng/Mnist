@@ -1,0 +1,27 @@
+---
+train:
+  params:
+    batch_size: 256
+    epoch: 10
+    lr: 0.001
+    decay: 0.1
+    decay_step: 5000
+  save:
+    save_path: "/home/cyh/GazeBenchmark/exp/Implementation/Mnist/UT"
+    model_name: Mnist
+    step: 1
+  data:
+    image: "/home/cyh/GazeDataset20200519/EyeBased/UT-single/Image"
+    label: "/home/cyh/GazeDataset20200519/EyeBased/UT-single/Cluster/train"
+  pretrains: "None"
+test:
+   load:
+      begin_step: 1
+      end_step: 10
+      steps: 1
+      load_path: "/home/cyh/GazeBenchmark/exp/Implementation/Mnist/UT"
+      model_name: Mnist
+   data:
+      image: "/home/cyh/GazeDataset20200519/EyeBased/UT-single/Image"
+      label: "/home/cyh/GazeDataset20200519/EyeBased/UT-single/Cluster/test"
+reader: reader_ut
