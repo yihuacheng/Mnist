@@ -67,7 +67,7 @@ This means the code will perform leave-one-person-out training automatically.
 `run.sh` performs iteration, you can change the iteration times in `run.sh` for different datasets, e.g., set the iteration times as `4` for four-fold validation.
 
 
-### Testing
+### Test
 You can run
 ```
 python test.py config/config_mpii.yaml 0
